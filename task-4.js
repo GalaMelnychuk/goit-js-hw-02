@@ -7,11 +7,11 @@
 const formatString = function(string) {
     let newArray = string.split('');
      if (newArray.length <= 40) {
-         console.log (string);
+         return string;
      } else {
         newArray.length = 40;
         let newString = newArray.join('');
-        console.log (`${newString} ...`);
+        return (`${newString} ...`);
      }
 };
 
@@ -27,9 +27,5 @@ console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
 console.log(formatString('Curabitur ligula sapien.'));
 // вернется оригинальная строка
 
-console.log(
-  formatString(
-    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
-  ),
-);
+console.log(formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',));
 // вернется форматированная строка
